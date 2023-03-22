@@ -9,7 +9,8 @@ class Advanced_Search(Base_page):
     KEYWORD_OPTION = (By.ID, "s0-1-17-4[0]-7[1]-_in_kw")
     KEYWORD_EXCLUDE = (By.ID, "_ex_kw")
     SEARCH_CATEGORY = (By.ID, "s0-1-17-4[0]-7[3]-_sacat")
-    SEARCH_BUTTON = (By.ID, "/html/body/div[3]/div/main/form/fieldset[1]/div[5]/button")
+    ADVANCED_SEARCH_BUTTON = (By.XPATH, "/html/body/div[3]/div/main/form/fieldset[1]/div[5]/button")
+
 
     def enter_keyword_or_item_number(self, product_name):
         self.chrome.find_element(*self.KEYWORD_TEXT).send_keys(product_name)
@@ -26,4 +27,4 @@ class Advanced_Search(Base_page):
         select_category_dropdown.select_by_visible_text("Clothing, Shoes & Accessories")
 
     def click_search_button(self):
-        self.chrome.find_element(*self.SEARCH_BUTTON).click()
+        self.chrome.find_element(*self.ADVANCED_SEARCH_BUTTON).click()

@@ -26,7 +26,7 @@ class Homepage(Base_page):
         self.chrome.find_element(*self.SEARCH_BUTTON).click()
 
     def click_advanced_search_link(self):
-        self.wait_and_click_element_by_selector(*self.ADVANCED_SEARCH_LINK)
+        self.chrome.find_element(*self.ADVANCED_SEARCH_LINK).click()
 
     def search_result_comparison(self):
         pass

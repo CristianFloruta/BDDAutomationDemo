@@ -12,7 +12,7 @@ def step_impl(context, product_name):
     context.homepage_object.insert_search_value(product_name=product_name)
 
 
-@when('Homepage: I select "category_name" from all categories dropdown menu')
+@when('Homepage: I select "{category_name}" from all categories dropdown menu')
 def step_impl(context, category_name):
     context.homepage_object.select_category(category_name=category_name)
 
