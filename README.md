@@ -6,7 +6,7 @@ Cerinte:
 - Se instaleaza PyCharm Edition (https://www.jetbrains.com/pycharm/download/#section=windows)
 - Se instaleaza Git (https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 - Se deschide git bash cu click drp in locatia unde se doreste a fi clonat
-- Se scrie comanda: git clone htpps://
+- Se scrie comanda: git clone https://github.com/CristianFloruta/BDDAutomationDemo.git
 - In Pycharm deschidem proiectul: File -> Open -> Folderul proiectului
 - Instalare librarii necesare: In terminal se ruleaza comenzile
 	- pip install selenium
