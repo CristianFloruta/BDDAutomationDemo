@@ -13,6 +13,6 @@ Cerinte:
 	- pip install behave
 	- pip install web-driver-manager
 	- pip install behave-html-formatter
-- Rulare teste: in terminal se foloseste comanda : behave –f html –o Raport.html
-- Accesare raport: click drp pe raportul generat (Raport.html) -> Open in -> Browser
+- Rulare teste: in terminal se foloseste comanda : behave –f html –o behave_report.html
+- Accesare raport: click drp pe raportul generat (behave_report.html) -> Open in -> Browser
 
