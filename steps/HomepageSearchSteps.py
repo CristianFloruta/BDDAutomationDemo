@@ -29,4 +29,4 @@ def step_impl(context):
 
 @then('ResultPage: Minimum 1,000 results are retrieved')
 def step_impl(context):
-    pass
+    context.homepage_object.search_result_comparison()
