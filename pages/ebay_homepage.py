@@ -10,7 +10,9 @@ class Homepage(Base_page):
     SEARCH_CATEGORY = (By.ID, "gh-cat")
     SEARCH_BUTTON = (By.ID, "gh-btn")
     ADVANCED_SEARCH_LINK = (By.ID, "gh-as-a")
-    SEARCH_RESULT = (By.XPATH, "//h1//child::span[text()='12,000,000']")
+    SEARCH_RESULT = (By.CSS_SELECTOR, "div[class='srp-controls__control srp-controls__count'] span:nth-child(1)")
+    EXPECTED_TEST_VALUE = 1000
+
 
     def navigate_to_homepage(self):
         self.chrome.get(self.HOMEPAGE_LINK)
@@ -29,4 +31,7 @@ class Homepage(Base_page):
         self.chrome.find_element(*self.ADVANCED_SEARCH_LINK).click()
 
     def search_result_comparison(self):
-        pass
+        text = self.chrome.find_element(*self.SEARCH_RESULT).text
+        actual_result = text.replace(",", "")
+        assert int(actual_result) > self.EXPECTED_TEST_VALUE, f"ERROR: Expected: {self.EXPECTED_TEST_VALUE}, Actual: " \
+                                                              f"{int(actual_result)}"
