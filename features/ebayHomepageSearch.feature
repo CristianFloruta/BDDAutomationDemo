@@ -11,6 +11,9 @@ Feature: Search functionality of ebay.com homepage
         | product_name | category_name |
         | iphone       | Cell Phones & Accessories |
         | ipad         | Computers/Tablets & Networking |
+        | security     | Books              |
+        | canon        | Cameras & Photo                |
+        | toys         | Baby                           |
 
     @T2 @sanityTesting
     Scenario Outline:  Advanced Search test for clothing, shoes and accessories
@@ -25,6 +28,9 @@ Feature: Search functionality of ebay.com homepage
       Examples:
         | product_name | keyword_choice | exclude_brand |
         | Shoes        | All words, any order | adidas  |
-        | Tshirt       | Exact words, exact order | red |
+        | Tshirt       | Exact words, exact order | solomon |
+        | cap     | Any words, any order     | columbia |
+        | sweater      | Exact words, any order | reebok     |
+        | hunting      | All words, any order   | nike     |
 
 
