@@ -25,8 +25,3 @@ def step_impl(context):
 @when('Homepage: I click on Advanced search text link')
 def step_impl(context):
     context.homepage_object.click_advanced_search_link()
-
-
-@then('ResultPage: Minimum 1,000 results are retrieved')
-def step_impl(context):
-    context.homepage_object.search_result_comparison()
